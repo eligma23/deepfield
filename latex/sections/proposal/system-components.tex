@@ -22,7 +22,8 @@
     \item \textbf{Orchestrate:} Supervisor-managed dependencies, handoffs, priorities, and budgets.
     \item \textbf{Execute:} Parallel independent work; respect measurement and analysis dependencies.
     \item \textbf{Recover:} Track runs, checkpoints, failures, and affected outputs before resubmission.
-    \item \textbf{Collaborate:} Scientists revise goals, inspect evidence, and intervene in key decisions.
+    \item \textbf{Workspace:} Natural-language goals and feedback; inspect
+    hypothesis branches, evidence, data, code, and research progress.
     \item \textbf{Evaluate:} Record traces, costs, and outputs; compare workflows independently.
 \end{itemize}
 \end{frame}
@@ -48,7 +49,8 @@
 \begin{itemize}
 \setlength{\itemsep}{0.65em}
     \item \textbf{Working context:} Current question, constraints, evidence, hypotheses, tool feedback, and next actions.
-    \item \textbf{Persistent memory:} Shared state, long-term evidence and experience, complete artifacts.
+    \item \textbf{Persistent memory:} Separate shared task state, long-term
+    evidence and experience, and complete research artifacts.
     \item \textbf{Retrieve and compress:} Preserve numbers, units, correlated errors, counterevidence, and disagreements.
     \item \textbf{Version:} Track provenance, revisions, validation status, and obsolete conclusions.
     \item \textbf{Handoff and resume:} Share task IDs and artifacts; recover valid state from checkpoints.
@@ -77,15 +79,22 @@ $\rightarrow$ state update.
 
 % Source page: Deepfield.md Page 52; exactly one frame.
 \setsource{\href{https://doi.org/10.1038/s41551-026-01769-6}{XunZi, Nature Biomedical Engineering (2026)}; \href{https://arxiv.org/abs/2610.04074}{IdeaScientist, arXiv:2610.04074 (2026)}}
-\begin{frame}[t,label=md-52]{Multi-Model Fusion}
+\begin{frame}[t,label=md-52]{Multimodal Fusion and Model Training}
 \small
 \begin{itemize}
-\setlength{\itemsep}{0.65em}
-    \item \textbf{Reasoning model:} Literature interpretation, hypotheses, mechanisms, and planning.
-    \item \textbf{Scientific models:} Quantitative analysis of data, spectra, graphs, simulations, and observations.
-    \item \textbf{Alignment:} Match reaction, energy region, environment, and hypothesis version.
-    \item \textbf{Fusion:} Combine scientific and reasoning features in calibrated prediction or decision heads.
-    \item \textbf{Evaluate before training:} Compare separate and fused models; keep LLM confidence distinct from physical uncertainty.
+\setlength{\itemsep}{0.45em}
+    \item \textbf{Align evidence:} Match literature, nuclear data, spectra,
+    energy levels and reaction networks, simulations, and observations by reaction,
+    energy, and environment.
+    \item \textbf{Reason and quantify:} Combine mechanistic reasoning with
+    numerical predictions and uncertainty to evaluate competing hypotheses.
+    \item \textbf{Establish baselines:} First test existing models, retrieval,
+    and scientific tools; compare separate and combined use.
+    \item \textbf{Explore training:} With expert-reviewed samples, study domain
+    continual pretraining, SFT, and role-specific LoRA / reinforcement learning.
+    \item \textbf{Evaluate contributions:} Separate knowledge updates,
+    prompt/code strategies, and parameter training; distinguish LLM confidence
+    from physical uncertainty.
 \end{itemize}
 \end{frame}
 

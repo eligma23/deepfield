@@ -7,35 +7,47 @@
 \smallskip
 \begin{enumerate}
 \setlength{\itemsep}{0.45em}
-    \item \textbf{Literature:} Set goals and constraints; identify reactions, energy regions, and evidence.
-    \item \textbf{Hypothesis + Code:} Propose mechanisms and reuse code for predictions.
-    \item \textbf{First experiment:} Optimize the plan and measure physical cross sections.
-    \item \textbf{Code-led follow-up:} Analyze data; proactively propose and execute observations or simulations.
-    \item \textbf{Interpretation:} Joint analysis, independent verification, and scientist judgment.
-    \item \textbf{Next cycle:} Update evidence, models, and hypotheses.
+    \item \textbf{Literature:} Identify reactions, energy regions, and evidence
+    under scientist-defined goals and constraints.
+    \item \textbf{Hypothesis + Code:} Develop competing mechanisms and
+    quantitative predictions using verified, reusable tools.
+    \item \textbf{First experiment:} Experiment Agent and the human team
+    optimize and perform a real cross-section measurement.
+    \item \textbf{Code-led follow-up:} Infer cross sections and rates;
+    propose discriminating observations, archival analyses, or simulations.
+    \item \textbf{Execution:} Code runs simulations and analyzes data;
+    Experiment coordinates new observations with scientists and observing teams.
+    \item \textbf{Interpretation and next cycle:} Independently verify results;
+    scientists judge explanations and update evidence, models, and questions.
 \end{enumerate}
 \end{frame}
 
 % Source page: Deepfield.md Page 43; exactly one frame.
 \setsource{}
 \begin{frame}[c,label=md-43]{Core MAS Roles}
-\small
+\footnotesize
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.23\textwidth}L{0.7\textwidth}@{}}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.18\textwidth}L{0.75\textwidth}@{}}
 \toprule
 \textbf{Role} & \textbf{Main responsibility} \\
 \midrule
-\textbf{Literature} & Evidence, reactions, energy regions, datasets, reusable methods. \\[1.0ex]
-\textbf{Hypothesis} & Mechanisms, predictions, comparisons, falsification criteria. \\[1.0ex]
-\textbf{Code} & Reuse, measurement analysis, calculations, proactive follow-up proposals. \\[1.0ex]
-\textbf{Experiment} & Feasibility, settings, measurements, and observation coordination. \\[1.0ex]
-\textbf{Verification} & Independent checks of evidence, physics, calculations, and uncertainty. \\[1.0ex]
-\textbf{Supervisor} & Tasks, dependencies, shared state, resources, and recovery. \\[1.0ex]
+\textbf{Literature} & Evidence, conflicts, knowledge gaps, reactions and energy regions;
+reusable data, code, and methods. \\[0.5ex]
+\textbf{Hypothesis} & Generate, debate, refine, and select competing mechanisms;
+predictions, falsification, and feedback from both experiment types. \\[0.5ex]
+\textbf{Code} & Reuse, adapt, or develop tools; infer cross sections and rates;
+run astrophysical simulations and proactively propose follow-ups. \\[0.5ex]
+\textbf{Experiment} & Feasible designs, beam measurements, and instrument feedback;
+coordinate new observations with scientists and observing teams. \\[0.5ex]
+\textbf{Verification} & Independent evidence, physical and numerical checks;
+uncertainty, reproducibility, and external validation. \\[0.5ex]
+\textbf{Supervisor} & Tasks, shared state, memory, dependencies, resources,
+and recovery. \\[0.5ex]
 \bottomrule
 \end{tabular*}\par
 
-\slidenote{Scientists guide the system throughout. Research directions
-define capabilities; Agent roles define responsibilities.}
+\slidenote{Scientists set and revise goals and judge scientific conclusions.
+Research directions define capabilities; Agent roles define responsibilities.}
 \end{frame}
 
 % Source page: Deepfield.md Page 44; exactly one frame.
@@ -48,10 +60,10 @@ define capabilities; Agent roles define responsibilities.}
 \textbf{Candidate role} & \textbf{Responsibility} \\
 \midrule
 \textbf{Reflection} & Check assumptions, evidence, counterexamples, and testability. \\[1.0ex]
-\textbf{Ranking} & Compare scientific value, feasibility, and resource needs;
-retain disagreements. \\[1.0ex]
-\textbf{Proximity} & Find related mechanisms, complementary ideas,
-and unexplored directions. \\[1.0ex]
+\textbf{Ranking} & Pairwise comparisons of scientific value, feasibility,
+and resource needs; retain disagreements. \\[1.0ex]
+\textbf{Proximity} & Cluster and de-duplicate hypotheses; identify complementary
+mechanisms and unexplored directions. \\[1.0ex]
 \textbf{Evolution} & Revise or combine hypotheses; retain versions
 and reasons for changes. \\[1.0ex]
 \textbf{Review synthesis} & Feed recurring errors and knowledge gaps

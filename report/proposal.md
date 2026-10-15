@@ -219,7 +219,7 @@ Supervisor 定期汇总候选覆盖、评审分歧、证据缺口和资源消耗
 
 ---
 
-### I. Continual Knowledge-Guided Exploration & Model Discovery
+### I. Continual Knowledge-Guided Exploration
 
 **拟研究贡献**：多源科学证据的持续对齐、冲突处理及其对定量研究决策的贡献，以可追溯知识库和基线比较验证。
 
@@ -248,7 +248,7 @@ Supervisor 定期汇总候选覆盖、评审分歧、证据缺口和资源消耗
 
 **交付物**：包含机制、定量预测、文献来源、竞争解释与否证条件的假设卡片，以及可追溯的评价和更新记录。
 
-### III. Scientific Code Reuse & Development, Data Analysis & Simulation
+### III. Data Analysis & Simulation with Codes
 
 **科学问题**：如何让 Code Agent 优先复现并复用已有科研代码，在必要时适配、扩展或开发新代码，分析真实截面测量，并主动设计后续观测或模拟实验以推进天体物理解释？
 
@@ -263,7 +263,7 @@ Supervisor 定期汇总候选覆盖、评审分歧、证据缺口和资源消耗
 
 **交付物**：可执行分析与模拟代码、截面和反应率及其不确定性、Code Agent 主动提出的第二类实验方案、天体物理预测与可复现计算档案。
 
-### IV. Scientific Experimental Design & Optimization
+### IV. Experimental Design & Optimization
 
 **科学问题**：如何把候选科学问题和 Code Agent 的后续实验提案，转为满足仪器、观测资源及预算约束的可执行方案，并依据实际反馈调整？
 
@@ -278,7 +278,7 @@ Supervisor 定期汇总候选覆盖、评审分歧、证据缺口和资源消耗
 
 **交付物**：可执行的截面测量与后续观测计划、装置优化方案、标定与数据采集流程，以及资源分配和反馈调整策略。
 
-### V. Scientific Experimentation（实验实施）
+### V. Experimentation Implementation
 
 **科学问题**：如何开展束流实验、天体实验和数值实验，获得能够检验假设、解释物理机制并推动下一轮研究的科学结果？
 
@@ -290,7 +290,7 @@ Supervisor 定期汇总候选覆盖、评审分歧、证据缺口和资源消耗
 
 **交付物**：束流测量数据及截面结果、天文观测或档案数据分析结果、可复现数值实验，以及联合物理解释和下一轮研究问题。
 
-### VI. Scientific Discovery Benchmarking
+### VI. Benchmark
 
 **科学问题**：如何围绕文献、假设、代码和实验建立可复现的 Benchmark，评价各 Agent 的能力及完整科研 Loop 的科学价值？
 

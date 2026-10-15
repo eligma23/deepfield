@@ -1,0 +1,116 @@
+\subsection{ML in Nuclear Astrophysics}
+% Source page: Deepfield.md Page 19; exactly one frame.
+\setsource{}
+\begin{frame}[c,label=md-19]
+
+\sectiondivider{Reference}{Part II: ML in Nuclear Astrophysics}
+\end{frame}
+
+% Source page: Deepfield.md Page 34; exactly one frame.
+\setsource{\href{https://doi.org/10.1103/PhysRevAccelBeams.25.044601}{Miskovich et al., PRAB 25, 044601 (2022)}}
+\begin{frame}[c,label=md-34]{Exp Optimization: Online Bayesian Optimization}
+\small
+\begin{block}{Scientific question}
+Can beam-based Bayesian optimization align SECAR and improve mass-plane
+optics with fewer measurements than manual tuning?
+\end{block}
+\smallskip
+\textbf{ML problem:} Sample-efficient optimization of measured beam metrics.
+\vspace{0.3cm}
+
+\slideheading{Mathematical Abstraction}
+\medskip
+\textbf{Alignment}
+\[
+\mathbf u_s^*=\arg\min_{\mathbf u_s}d_{\rm FP1}(\mathbf u_s)
+\]
+\smallskip
+\textbf{Mass-plane optics}
+\[
+f_{\rm FP2}(\mathbf u_m)=
+\left(\frac{x+w_x-x_0}{20}\right)^4+
+\left(\frac{w_y}{70}\right)^4
+\]
+\slidenote{$\mathbf u_s,\mathbf u_m$: steerer and multipole settings;
+$d_{\rm FP1}$: spot-center spread.\\[0.3em]
+$x_0$: beam axis; $w_x,w_y$: spot widths.}
+\end{frame}
+
+% Source page: Deepfield.md Page 35; exactly one frame.
+\setsource{\href{https://doi.org/10.1103/PhysRevAccelBeams.25.044601}{Miskovich et al., PRAB 25, 044601 (2022)}}
+\begin{frame}[t,label=md-35]{Online Bayesian Optimization: Method and Results}
+\small
+\slideheading{Technical Stack}
+\smallskip
+\begin{itemize}
+\setlength{\itemsep}{0.45em}
+    \item \textbf{Diagnostics:} FP1 spot centers; FP2 position and widths.
+    \item \textbf{Surrogate:} A Gaussian process, updated after each measurement.
+    \item \textbf{Next setting:} Minimize $\mathrm{LCB}(\mathbf u)=\mu(\mathbf u)-\xi\sigma(\mathbf u)$.
+    \item \textbf{Control:} GPy / GPyOpt + PyEpics; steerers, then multipoles.
+\end{itemize}
+\medskip
+\slideheading{Results}
+\smallskip
+\begin{itemize}
+\setlength{\itemsep}{0.4em}
+    \item Angular deviation $<1$ mrad.
+    \item At least \alert{$3\times$ faster} than manual tuning.
+    \item \alert{32\%} smaller beam-spot width for $^{133}$Cs.
+\end{itemize}
+\end{frame}
+
+% Source page: Deepfield.md Page 37; exactly one frame.
+\setsource{\href{https://doi.org/10.1103/PhysRevResearch.7.013074}{Tsintari et al., PRR 7, 013074 (2025)}}
+\begin{frame}[c,label=md-37]{Exp Optimization: SECAR $(p,n)$ Optics}
+\small
+\begin{block}{Scientific question}
+Which SECAR settings separate nearly isobaric $(p,n)$ recoils from the beam
+while retaining enough recoils for a cross-section measurement?
+\end{block}
+\smallskip
+\textbf{ML problem:} Simulation-guided multi-objective optics optimization.
+\vspace{0.3cm}
+
+\slideheading{Mathematical Abstraction}
+\medskip
+\[
+\mathbf u\in\mathbb R^{19}\xrightarrow{\text{COSY-INFINITY}}
+(\Delta_{\rm FP2},\Delta_{\rm FP3},w_1,\ldots,w_K)
+\]
+\vspace{0.12cm}
+\[
+\begin{aligned}
+\text{maximize}\quad & (\Delta_{\rm FP2},\Delta_{\rm FP3}) \\[0.8em]
+\text{minimize}\quad & (w_1,\ldots,w_K)
+\end{aligned}
+\]
+\slidenote[0.3cm]{%
+$\Delta$: recoil--beam separation at slits;\quad
+$w$: beam width along the separator.}
+\end{frame}
+
+% Source page: Deepfield.md Page 38; exactly one frame.
+\setsource{\href{https://doi.org/10.1103/PhysRevResearch.7.013074}{Tsintari et al., PRR 7, 013074 (2025)}}
+\begin{frame}[t,label=md-38]{SECAR $(p,n)$ Optics: Method and Results}
+\small
+\slideheading{Technical Stack}
+\smallskip
+\begin{itemize}
+\setlength{\itemsep}{0.45em}
+    \item \textbf{Search:} 19 field settings; recoil separation and beam widths.
+    \item \textbf{Simulation:} COSY-INFINITY beam and recoil transport.
+    \item \textbf{Optimization:} MOEA/D, Tchebycheff decomposition, differential evolution, and polynomial mutation.
+    \item \textbf{Validation:} Beam tests of Pareto-selected optics; GP transmission interpolation.
+\end{itemize}
+\medskip
+\slideheading{Results}
+\smallskip
+
+New ion optics enabled an astrophysical $(p,n)$ measurement:
+\[
+{}^{58}\mathrm{Fe}(p,n){}^{58}\mathrm{Co},\qquad
+\boxed{\sigma=20.3\pm6.3\ \mathrm{mb}}.
+\]
+\end{frame}
+

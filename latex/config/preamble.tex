@@ -1,0 +1,54 @@
+\pdfminorversion=7
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{textcomp}
+\usetikzlibrary{arrows.meta,positioning}
+\graphicspath{{figures/}{latex/figures/}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption}{size=\scriptsize}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{0pt}
+\setbeamertemplate{bibliography item}[text]
+\setbeamerfont{bibliography entry author}{size=\footnotesize}
+\setbeamerfont{bibliography entry title}{size=\footnotesize}
+\setbeamerfont{bibliography entry location}{size=\footnotesize}
+\setbeamerfont{bibliography entry note}{size=\scriptsize}
+\setbeamercolor{bibliography entry author}{fg=black}
+% Shared typography for repeated slide elements. End each paragraph while its
+% font is active, so notes keep their own line spacing rather than body leading.
+\newcommand{\slideheading}[1]{{\usebeamercolor[fg]{structure}\bfseries #1\par}}
+\newcommand{\slidenote}[2][0.25cm]{%
+    \par\vspace{#1}%
+    {\footnotesize\raggedright #2\par}%
+}
+\newcommand{\sectiondivider}[2]{%
+    \centering
+    {\LARGE\bfseries\usebeamercolor[fg]{structure}#1\par}%
+    \vspace{\baselineskip}%
+    {\large #2\par}%
+}
+% Keep sources out of the slide body and reserve the same space on each page.
+\newcommand{\currentsource}{}
+\newcommand{\setsource}[1]{\gdef\currentsource{#1}}
+\addtobeamertemplate{footline}{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1.2ex,leftskip=1cm,rightskip=1cm]{normal text}%
+        {\fontsize{6.4}{7.5}\selectfont\color{black!60}\currentsource\strut}%
+    \end{beamercolorbox}%
+}{}
+
+\input{config/metadata}
+% Same watermark geometry as template.tex, with reduced opacity for readability.
+\newcommand{\mywatermark}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[opacity=0.045,xshift=2cm,yshift=-0.4cm,at=(current page.center)]
+            {\includegraphics[width=0.52\paperwidth]{logo_background.png}};
+    \end{tikzpicture}%
+}
+\setbeamertemplate{background}{\ifnum\value{page}>1\relax\mywatermark\fi}
+

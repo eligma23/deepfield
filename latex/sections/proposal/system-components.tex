@@ -1,0 +1,105 @@
+\subsection{System Components}
+% Source page: Deepfield.md Page 47; exactly one frame.
+\setsource{}
+\begin{frame}[t,label=md-47]{Data Engineering}
+\small
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Acquire:} Papers, formulas, tables, curves, nuclear data, experiments, simulations, and observations.
+    \item \textbf{Normalize:} Identifiers, units, energy frames, metadata, and validity ranges.
+    \item \textbf{Align:} Connect modalities by reaction, energy region, conditions, and observables.
+    \item \textbf{Preserve provenance:} Originals, versions, calibration, uncertainty, covariance, and conflicts.
+    \item \textbf{Build datasets:} Expert-reviewed examples; independent splits by source, time, or reaction.
+\end{itemize}
+\end{frame}
+
+% Source page: Deepfield.md Page 48; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\begin{frame}[t,label=md-48]{Harness Engineering}
+\small
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Orchestrate:} Supervisor-managed dependencies, handoffs, priorities, and budgets.
+    \item \textbf{Execute:} Parallel independent work; respect measurement and analysis dependencies.
+    \item \textbf{Recover:} Track runs, checkpoints, failures, and affected outputs before resubmission.
+    \item \textbf{Collaborate:} Scientists revise goals, inspect evidence, and intervene in key decisions.
+    \item \textbf{Evaluate:} Record traces, costs, and outputs; compare workflows independently.
+\end{itemize}
+\end{frame}
+
+% Source page: Deepfield.md Page 49; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}; \href{https://doi.org/10.1038/s41586-026-10658-6}{ERA, Nature (2026)}}
+\begin{frame}[t,label=md-49]{Prompt Engineering}
+\small
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Roles:} Define scientific responsibility, tools, and collaboration boundaries.
+    \item \textbf{Tasks:} State questions, assumptions, units, reference frames, validity, and outputs.
+    \item \textbf{Evidence:} Require competing explanations, predictions, uncertainty, and falsification criteria.
+    \item \textbf{Code priority:} Search, reproduce, and reuse before adapting or developing.
+    \item \textbf{Feedback:} Version prompts; evaluate changes against scientist feedback and diagnostics.
+\end{itemize}
+\end{frame}
+
+% Source page: Deepfield.md Page 50; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\begin{frame}[t,label=md-50]{Context Engineering}
+\small
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Working context:} Current question, constraints, evidence, hypotheses, tool feedback, and next actions.
+    \item \textbf{Persistent memory:} Shared state, long-term evidence and experience, complete artifacts.
+    \item \textbf{Retrieve and compress:} Preserve numbers, units, correlated errors, counterevidence, and disagreements.
+    \item \textbf{Version:} Track provenance, revisions, validation status, and obsolete conclusions.
+    \item \textbf{Handoff and resume:} Share task IDs and artifacts; recover valid state from checkpoints.
+\end{itemize}
+\end{frame}
+
+% Source page: Deepfield.md Page 51; exactly one frame.
+\setsource{\href{https://doi.org/10.1038/s41586-026-11044-y}{Paper2Agent, Nature (2026)}; \href{https://doi.org/10.1038/s41586-026-10658-6}{ERA, Nature (2026)}}
+\begin{frame}[t,label=md-51]{Tool Use}
+\small
+\slideheading{Invocation loop}
+\smallskip
+
+Scientific purpose $\rightarrow$ tool selection $\rightarrow$ input checks
+$\rightarrow$ execution $\rightarrow$ numerical and physical checks
+$\rightarrow$ state update.
+\medskip
+\begin{itemize}
+\setlength{\itemsep}{0.55em}
+    \item \textbf{Library:} Literature and nuclear data, scientific software, code execution, analysis, instruments.
+    \item \textbf{Reuse:} Reproduce paper methods before exposing MCP tools, APIs, or wrappers.
+    \item \textbf{Contracts:} Versions, formats, units, frames, validity, costs, and invocation conditions.
+    \item \textbf{Feedback:} Diagnose failures; distinguish execution success, numerical validity, and scientific evidence.
+\end{itemize}
+\end{frame}
+
+% Source page: Deepfield.md Page 52; exactly one frame.
+\setsource{\href{https://doi.org/10.1038/s41551-026-01769-6}{XunZi, Nature Biomedical Engineering (2026)}; \href{https://arxiv.org/abs/2610.04074}{IdeaScientist, arXiv:2610.04074 (2026)}}
+\begin{frame}[t,label=md-52]{Multi-Model Fusion}
+\small
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Reasoning model:} Literature interpretation, hypotheses, mechanisms, and planning.
+    \item \textbf{Scientific models:} Quantitative analysis of data, spectra, graphs, simulations, and observations.
+    \item \textbf{Alignment:} Match reaction, energy region, environment, and hypothesis version.
+    \item \textbf{Fusion:} Combine scientific and reasoning features in calibrated prediction or decision heads.
+    \item \textbf{Evaluate before training:} Compare separate and fused models; keep LLM confidence distinct from physical uncertainty.
+\end{itemize}
+\end{frame}
+
+% Source page: Deepfield.md Page 53; exactly one frame.
+\setsource{}
+\begin{frame}[t,label=md-53]{Validation}
+\small
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Software:} Reference reproduction, convergence, and executable regression cases.
+    \item \textbf{Physics:} Units, dimensions, scales, conservation, positivity, and model validity.
+    \item \textbf{Uncertainty:} Calibration, interval coverage, and stability across reasonable analyses.
+    \item \textbf{Evidence:} Independent checks against competing predictions; distinguish simulations from observations.
+    \item \textbf{System:} Re-evaluate changes; track outcomes, failures, human input, and resource costs.
+\end{itemize}
+\end{frame}
+

@@ -1,0 +1,17 @@
+% Build: cd latex && latexmk -pdf report.tex
+% 4:3 Madrid template; no change to the original slide aspect ratio.
+% Revised against feedback.md using the original 58-page report.pdf numbering.
+% Source-page comments below refer to Deepfield.md, not the rendered PDF.
+% Requested cuts and the merged Vision change pagination; references and Q&A
+% are rebuilt at the end. Diagrams use native Beamer fonts where redrawn.
+\documentclass{beamer}
+\input{config/preamble}
+\begin{document}
+\input{frontmatter/cover}
+\input{frontmatter/contents}
+\input{sections/introduction}
+\input{sections/literature}
+\input{sections/proposal}
+\input{sections/qa}
+\input{sections/references}
+\end{document}

@@ -1,0 +1,117 @@
+% Source page: Deepfield.md Page 7; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\begin{frame}[c,label=md-7]{Co-Scientist: focus on generating hypotheses}
+\small
+\textbf{Three techniques}
+\begin{enumerate}
+    \setlength{\itemsep}{0.2em}
+    \item Self-play debate
+    \item Tournament-based evolution
+    \item Agentic capability
+\end{enumerate}
+\smallskip
+\begin{figure}
+\centering
+\includegraphics[width=0.86\textwidth]{architecture_co_scientist_with notes.png}
+\caption{Co-Scientist architecture with annotated research concepts.}
+\end{figure}
+\end{frame}
+
+% Source page: Deepfield.md Page 8; scaling and open question on separate frames.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\begin{frame}[c,label=md-8]{Co-Scientist: test-time compute scaling}
+\footnotesize
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{scaling_co_scientist.png}
+\caption{Internal Elo ratings of the best and top-ten hypotheses over time.}
+\end{figure}
+\textbf{Observation:} More inference-time search improves internally
+ranked hypotheses.
+\smallskip
+
+\textbf{Limits}
+\begin{enumerate}
+    \setlength{\itemsep}{0.25em}
+    \item No saturation was observed within the tested compute range.
+    \item No general quantitative law in FLOPs, tokens, or cost was established.
+    \item Internal Elo ratings cannot replace experimental success rates.
+\end{enumerate}
+\end{frame}
+
+% The open question is highlighted on its own page, without a block.
+\setsource{\href{https://doi.org/10.1038/s41586-026-10644-y}{Co-Scientist, Nature (2026): Discussion and Methods}}
+\begin{frame}[c,label=open-question]{Open Question: Emergence}
+\small
+\slideheading{The paper's perspective}
+\medskip
+Context memory and iterative refinement form an increasingly coherent,
+interconnected representation of the scientific research process.
+\medskip
+
+Meta-review carries lessons into subsequent prompts, enabling improvement
+without updating model parameters.
+\vspace{0.55cm}
+
+\slideheading{Open question}
+\medskip
+{\bfseries
+Can scientific intelligence emerge from this evolving internal model
+of the research process?\par}
+\end{frame}
+
+% Source page: Deepfield.md Page 9; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\begin{frame}[t,label=md-9]{Co-Scientist: focus on generating hypotheses}
+\small
+
+\slideheading{Default Criteria}
+\smallskip
+\begin{enumerate}
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Alignment} with the research goal.
+    \item \textbf{Plausibility:} Check reasoning and scientific assumptions.
+    \item \textbf{Novelty:} Go beyond existing knowledge; explain mechanisms.
+    \item \textbf{Testability:} Validate empirically through experiments.
+    \item \textbf{Safety:} Control outputs to prevent unsafe or harmful research.
+\end{enumerate}
+\slidenote{Additional criteria can be configured.}
+\end{frame}
+
+% Source page: Deepfield.md Page 10; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\begin{frame}[c,label=md-10]{Scientific Exploration}
+\centering
+{\Large\bfseries\usebeamercolor[fg]{structure} Search + Optimization\par}
+\smallskip
+{\small A \textbf{combinatorial search and optimization problem}
+in hypothesis space\par}
+\vspace{0.7cm}
+
+{\Large\bfseries\usebeamercolor[fg]{structure}
+Exploration $\longleftrightarrow$ Exploitation\par}
+\medskip
+{\small Balance finite compute between new ideas and refinement.\par}
+\end{frame}
+
+% Source page: Deepfield.md Page 11; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\begin{frame}[c,label=md-11]{New techniques to be explored...}
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.31\textwidth}L{0.64\textwidth}@{}}
+\toprule
+\textbf{Technique} & \textbf{Current limitation in Co-Scientist} \\
+\midrule
+World model & Context-based reasoning; no explicit executable scientific world model. \\[0.65ex]
+Reinforcement learning & Research feedback does not update policy parameters online. \\[0.65ex]
+Bayesian design & No complete information-gain-driven experimental design loop. \\[0.65ex]
+Formal verification & LLM review rather than mathematical or physical proofs. \\[0.65ex]
+Causal discovery & Mechanistic proposals without a unified causal-discovery algorithm. \\[0.65ex]
+Multi-objective search & Several criteria; candidates mainly organized by tournaments. \\[0.65ex]
+Continual learning & Persistent context rather than continual parameter learning. \\[0.65ex]
+Closed-loop experiments & Real validation, without fully automated online learning. \\[0.65ex]
+\bottomrule
+\end{tabular*}\par
+\end{frame}
+

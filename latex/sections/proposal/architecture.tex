@@ -1,0 +1,65 @@
+\subsection{Research Loop and Multi-Agent Architecture}
+% Source page: Deepfield.md Page 42; exactly one frame.
+\setsource{\href{https://doi.org/10.1038/s41586-026-10652-y}{Robin, Nature (2026)}}
+\begin{frame}[t,label=md-42]{Research Loop}
+\small
+\slideheading{One Loop connects two experiment types}
+\smallskip
+\begin{enumerate}
+\setlength{\itemsep}{0.45em}
+    \item \textbf{Literature:} Set goals and constraints; identify reactions, energy regions, and evidence.
+    \item \textbf{Hypothesis + Code:} Propose mechanisms and reuse code for predictions.
+    \item \textbf{First experiment:} Optimize the plan and measure physical cross sections.
+    \item \textbf{Code-led follow-up:} Analyze data; proactively propose and execute observations or simulations.
+    \item \textbf{Interpretation:} Joint analysis, independent verification, and scientist judgment.
+    \item \textbf{Next cycle:} Update evidence, models, and hypotheses.
+\end{enumerate}
+\end{frame}
+
+% Source page: Deepfield.md Page 43; exactly one frame.
+\setsource{}
+\begin{frame}[c,label=md-43]{Core MAS Roles}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.23\textwidth}L{0.7\textwidth}@{}}
+\toprule
+\textbf{Role} & \textbf{Main responsibility} \\
+\midrule
+\textbf{Literature} & Evidence, reactions, energy regions, datasets, reusable methods. \\[1.0ex]
+\textbf{Hypothesis} & Mechanisms, predictions, comparisons, falsification criteria. \\[1.0ex]
+\textbf{Code} & Reuse, measurement analysis, calculations, proactive follow-up proposals. \\[1.0ex]
+\textbf{Experiment} & Feasibility, settings, measurements, and observation coordination. \\[1.0ex]
+\textbf{Verification} & Independent checks of evidence, physics, calculations, and uncertainty. \\[1.0ex]
+\textbf{Supervisor} & Tasks, dependencies, shared state, resources, and recovery. \\[1.0ex]
+\bottomrule
+\end{tabular*}\par
+
+\slidenote{Scientists guide the system throughout. Research directions
+define capabilities; Agent roles define responsibilities.}
+\end{frame}
+
+% Source page: Deepfield.md Page 44; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\begin{frame}[c,label=md-44]{Candidate Agents for Hypothesis Refinement}
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.24\textwidth}L{0.69\textwidth}@{}}
+\toprule
+\textbf{Candidate role} & \textbf{Responsibility} \\
+\midrule
+\textbf{Reflection} & Check assumptions, evidence, counterexamples, and testability. \\[1.0ex]
+\textbf{Ranking} & Compare scientific value, feasibility, and resource needs;
+retain disagreements. \\[1.0ex]
+\textbf{Proximity} & Find related mechanisms, complementary ideas,
+and unexplored directions. \\[1.0ex]
+\textbf{Evolution} & Revise or combine hypotheses; retain versions
+and reasons for changes. \\[1.0ex]
+\textbf{Review synthesis} & Feed recurring errors and knowledge gaps
+into later generation. \\
+\bottomrule
+\end{tabular*}\par
+\slidenote[0.35cm]{%
+Begin as Hypothesis Agent subtasks; split roles only when evaluation justifies the cost.\\[0.4em]
+Internal rankings are not scientific evidence.}
+\end{frame}
+

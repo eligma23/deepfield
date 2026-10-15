@@ -1,0 +1,60 @@
+% Source page: Deepfield.md Page 15; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2610.04074}{IdeaScientist, arXiv:2610.04074 (2026)}}
+\begin{frame}[c,label=md-15]{IdeaScientist: RL in hypothesis generation}
+\small
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Insight:} Transfer mechanisms that solved analogous challenges in other fields.
+    \item \textbf{Three roles:} Gap finding, innovation, and report writing;
+    each trained with reinforcement learning.
+    \item \textbf{Corpus:} Svalbard Idea Vault, 2.77M decomposed research ideas.
+    \item \textbf{Evaluation:} Train before a temporal cutoff; test after it.
+\end{itemize}
+\medskip
+\begin{block}{Natural intersection}
+Particle physics, nuclear physics, astrophysics, cosmology, and AI.
+\end{block}
+\end{frame}
+
+% Source page: Deepfield.md Page 16; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2610.04074}{IdeaScientist, arXiv:2610.04074 (2026)}}
+\begin{frame}[t,label=md-16]{IdeaScientist: RL in hypothesis generation}
+\small
+\slideheading{The Svalbard Idea Vault}
+\smallskip
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+    \item An offline corpus of \textbf{2.77 million decomposed ideas}.
+    \item Each tuple contains problem, challenge, gap, intuition, and proposal.
+    \item Papers from 1986 to June 18, 2026; reference checks and topic-relevant method filtering.
+    \item \textbf{Inputs:} Problem definition and challenge.
+    \item \textbf{Three targets:} Methodological gap, research intuition, and complete proposal.
+\end{itemize}
+\end{frame}
+
+% Source page: Deepfield.md Page 17; exactly one frame.
+\setsource{\href{https://arxiv.org/abs/2610.04074}{IdeaScientist, arXiv:2610.04074 (2026)}}
+\begin{frame}[t,label=md-17]{IdeaScientist: RL in hypothesis generation}
+\small
+\slideheading{Reinforcement Learning}
+\smallskip
+\begin{itemize}
+\setlength{\itemsep}{0.3em}
+    \item A separate LoRA adapter for each role; asynchronous GRPO with role-specific rubric rewards.
+\end{itemize}
+
+\[
+r_{\rm rubric}=g\bigl(\lambda_{\rm free}r_{\rm free}
+ +\lambda_{\rm ref}r_{\rm ref}+\lambda_{\rm cit}r_{\rm cit}\bigr)
+\]
+\[
+\boxed{r=0.85r_{\rm rubric}+0.15r_{\rm proc}}
+\]
+\begin{itemize}
+\setlength{\itemsep}{0.45em}
+    \item \textbf{Reference-free:} Specificity, significance, feasibility, and evidence.
+    \item \textbf{Reference-grounded:} Agreement on substantive research decisions.
+    \item \textbf{Citation F1:} Overlap of cited papers with the reference.
+\end{itemize}
+\end{frame}
+

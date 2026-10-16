@@ -11,8 +11,8 @@
     \item \textbf{Evaluation:} Train before a temporal cutoff; test after it.
 \end{itemize}
 \medskip
-\begin{block}{Natural intersection}
-Particle physics, nuclear physics, astrophysics, cosmology, and AI.
+\begin{block}{Natural intersection of our research}
+Particle physics, nuclear physics, astrophysics, cosmology.
 \end{block}
 \end{frame}
 
@@ -52,9 +52,24 @@ r_{\rm rubric}=g\bigl(\lambda_{\rm free}r_{\rm free}
 \]
 \begin{itemize}
 \setlength{\itemsep}{0.45em}
-    \item \textbf{Reference-free:} Specificity, significance, feasibility, and evidence.
-    \item \textbf{Reference-grounded:} Agreement on substantive research decisions.
-    \item \textbf{Citation F1:} Overlap of cited papers with the reference.
+    \item \textbf{Reference-free:} LLM judges the output itself for methodological
+    specificity and significance, feasibility, evidence, and clarity.
+    \item \textbf{Reference-grounded:} Compare key fields (e.g., limitations,
+    method, evaluation) with the reference, allowing valid alternatives.
+    \item \textbf{Citation F1:} Deterministic F1 of the generated and reference
+    citation sets, balancing precision and recall.
 \end{itemize}
+\note{The three terms are training reward components (Section 3.2 and
+Appendix B.1). Each role has a corresponding reference artifact reconstructed
+from a human-authored paper: a gap analysis, research intuition, or proposal.
+The reference-free LLM judge assesses the output independently of that
+reference. The reference-grounded judge compares substantive fields, including
+limitations, proposed methods, evaluation design, and related work, while
+allowing sound alternatives to receive high scores. Fields are averaged
+uniformly for the gap finder; the innovator and report writer weight important
+fields twice as heavily as optional fields. Citation F1 is computed directly
+from the generated and reference sets of cited papers. The reported runs use
+equal weights for the three components. The validity gate g controls the rubric
+reward, and the separate process term penalizes protocol violations.}
 \end{frame}
 

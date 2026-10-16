@@ -32,7 +32,7 @@ latexmk -pdf report.tex
 
 ## 正文索引
 
-页码对应本次重构后的 56 页 PDF；新增、删除或移动幻灯片后，后续页码会改变。
+页码对应当前的 54 页 PDF；新增、删除或移动幻灯片后，后续页码会改变。
 
 | 当前页码 | 内容 | 文件 |
 | --- | --- | --- |
@@ -47,13 +47,13 @@ latexmk -pdf report.tex
 | 20 | Other papers | [sections/literature/other-studies.tex](sections/literature/other-studies.tex) |
 | 21–25 | Reference Part II、SECAR 实验优化 | [sections/literature/nuclear-astrophysics.tex](sections/literature/nuclear-astrophysics.tex) |
 | 26–29 | Deepfield 分隔页、命名、Vision、验收标准 | [sections/proposal/overview.tex](sections/proposal/overview.tex) |
-| 30–32 | Research Loop、MAS 角色 | [sections/proposal/architecture.tex](sections/proposal/architecture.tex) |
-| 33–39 | Data、Harness、Prompt、Context、Tools、Fusion、Validation | [sections/proposal/system-components.tex](sections/proposal/system-components.tex) |
-| 40–45 | Research Directions | [sections/proposal/research-directions.tex](sections/proposal/research-directions.tex) |
-| 46–48 | Benchmarks、独立评价、案例 Loop | [sections/proposal/evaluation.tex](sections/proposal/evaluation.tex) |
-| 49–50 | Roadmap and Budget | [sections/proposal/roadmap-budget.tex](sections/proposal/roadmap-budget.tex) |
-| 51 | Q&A / Thank You | [sections/qa.tex](sections/qa.tex) |
-| 52–56 | 全文参考文献 | [sections/references.tex](sections/references.tex) |
+| 30–31 | Example Scientific Loop、MAS 角色与假设细化 | [sections/proposal/architecture.tex](sections/proposal/architecture.tex) |
+| 32–38 | Data、Harness、Prompt、Context、Tools、Fusion、Validation | [sections/proposal/system-components.tex](sections/proposal/system-components.tex) |
+| 39–44 | Research Directions | [sections/proposal/research-directions.tex](sections/proposal/research-directions.tex) |
+| 45–46 | Benchmarks、独立评价 | [sections/proposal/evaluation.tex](sections/proposal/evaluation.tex) |
+| 47–48 | Roadmap and Budget | [sections/proposal/roadmap-budget.tex](sections/proposal/roadmap-budget.tex) |
+| 49 | Q&A / Thank You | [sections/qa.tex](sections/qa.tex) |
+| 50–54 | 全文参考文献 | [sections/references.tex](sections/references.tex) |
 
 ## 定位和修改一页
 

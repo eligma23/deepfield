@@ -7,46 +7,69 @@
 
 % Source page: Deepfield.md Page 3; exactly one frame.
 \setsource{\href{https://science.nasa.gov/mission/hubble/science/universe-uncovered/hubble-deep-fields/}{NASA Science: Hubble\textquotesingle s Deep Fields}}
-\begin{frame}[c,label=md-3]{Name: Why Deepfield?}
-\footnotesize
+\begin{frame}[t,label=md-3]{Name: Why Deepfield?}
+\small
+\raggedright
+{\large\bfseries\usebeamercolor[fg]{structure}Deep}\enspace$\rightarrow$\enspace nuclear
+\hspace{0.8cm}
+{\large\bfseries\usebeamercolor[fg]{structure}Field}\enspace$\rightarrow$\enspace astrophysics
+\par\vspace{0.30cm}
+{\large\bfseries\usebeamercolor[fg]{structure}Deep / Field}
+also evokes Jinping's {\color{blue}deep underground} laboratory.\par
+
+\vspace{0.2cm}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.62\textwidth}
-    \raggedright
-    \setlength{\parindent}{0pt}
-    \begin{itemize}
-        \setlength{\itemsep}{0.4em}
-        \item \textbf{Deep $\rightarrow$ nuclear;}\quad
-        \textbf{Field $\rightarrow$ astrophysics.}
-        \item \textbf{Deep / Field $\rightarrow$ depth / ground:}\\
-        Jinping's deep underground laboratory.
-        \item \textbf{Hubble Deep Field (HDF).}
-        \par\medskip
-        \textbf{The Hubble Deep Field experiment}\par
-        In 1995, Robert Williams proposed observing an apparently empty
-        patch of sky:
-        \par\smallskip
+\begin{column}{0.57\textwidth}
+    \small
+    \justifying
+    \setlength{\parskip}{0pt}
+    {\slideheading{The Hubble Deep Field experiment (HDF)}}
+    \vspace{0.10cm}
+    In 1995, Robert Williams, then director of the Space Telescope Science Institute, proposed a different idea:
+    \par\vspace{0.1cm}
+    {\bfseries What would happen
+    if we pointed the most advanced telescope at a seemingly empty patch of sky and observed it for long enough?\par}
+    \vspace{0.16cm}
+    (Ursa Major)
+    {\bfseries\boldmath\color{blue}10 days
+    $\longrightarrow$\enspace$\sim$3,000}%
+    \enspace {\color{blue}galaxies}\par
+    \vspace{0.14cm}
+    {\color{black}
+    \textbf{Significance:}
+    From searching for ever-known targets to explore unknown regions------
 
-        \textbf{What would we discover if we observed it for long enough?}
-        \par\smallskip
-
-        Ten days of observations in Ursa Major revealed
-        \textbf{about 3,000 galaxies}.
-        \par\medskip
-
-        \textbf{Significance:} From studying known targets to exploring unknown
-        regions---how do search strategies and resource allocation shape discovery?
-    \end{itemize}
+    {\color{blue}So how do strategies and resource allocation shape discovery?}\par}
 \end{column}
-\begin{column}{0.34\textwidth}
+\begin{column}{0.40\textwidth}
+    \setlength{\topsep}{0pt}
+    \setlength{\partopsep}{0pt}
+    \setbeamertemplate{caption}{%
+        \begin{minipage}{\linewidth}
+        \raggedright
+        {\usebeamercolor[fg]{caption name}\insertcaptionname~\insertcaptionnumber: }%
+        {\usebeamercolor[fg]{caption}\insertcaption}\par
+        \end{minipage}%
+    }
     \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{hubble_deep_field.png}
-    \caption{Central portion of the Hubble Deep Field, observed in 1995.}
+    \caption{Central portion of the HDF}
     \end{figure}
-    {\scriptsize\itshape NASA, Robert Williams, and the Hubble Deep Field
-    Team (STScI).\par}
+    \vspace{0.15cm}
+    \raggedright
+    {\fontsize{6}{7}\selectfont\color{black!60}
+    NASA, Robert Williams, and HDF Team (STScI).\par}
 \end{column}
 \end{columns}
+
+\note{The name connects nuclear physics and astrophysics, with depth and
+ground also evoking Jinping's deep underground laboratory. The Hubble Deep
+Field provides a second inspiration: in 1995, Robert Williams proposed
+observing an apparently empty patch of sky in Ursa Major. Ten days of
+observations revealed about 3,000 galaxies. The connection to Deepfield is
+the move from studying known targets toward exploring unknown regions,
+asking how search strategies and resource allocation shape discovery.}
 \end{frame}
 
 % Source page: Deepfield.md Page 39; exactly one frame.
@@ -56,22 +79,22 @@
 \begin{block}{An AI-Driven, Human-in-the-Loop Laboratory}
 \textbf{Setting:} JUNA / Jinping deep underground nuclear astrophysics experiments.
 \end{block}
-\medskip
+\smallskip
 \textbf{Research Vision}
 \begin{enumerate}
     \renewcommand{\theenumi}{\arabic{enumi}}
     \setbeamertemplate{enumerate item}{\insertenumlabel}
-    \setlength{\itemsep}{0.5em}
+    \setlength{\itemsep}{0.3em}
     \item \textbf{Autonomous research:} Investigate literature, generate
     hypotheses, reuse and develop code, and design and analyze experiments.
-    \item \textbf{Human guidance:} Scientists revise goals, contribute expertise,
-    resolve disagreements, and judge key decisions.
-    \item \textbf{Recursive improvement:} Use experimental feedback and
-    reflection to improve knowledge, code, strategies, and model capabilities.
-    \item \textbf{Scientific loop:} Connect real cross-section measurements
-    with Code-proposed observations, archival analyses, or targeted simulations.
-    \item \textbf{Long-term aim:} Accumulate research experience, proactively
-    discover scientific questions, and improve human--AI discovery capabilities.
+    \item \textbf{Human-in-the-loop:} Scientists conduct experiments;
+    the full research process remains understandable, inspectable, and explainable.
+    \item \textbf{Scientific loop:} Connect literature, hypotheses, simulations,
+    nuclear experiments, and astronomical observations in one iterative loop.
+    \item \textbf{Recursive improvement:} Learn better research
+    strategies and recursively improve agent capability and efficiency by meta-learning and iteration.
+    \item \textbf{Long-term aim:} Progress from semi-autonomous to autonomous
+    research, and explore the evolution and emergence of scientific intelligence.
 \end{enumerate}
 \end{frame}
 
@@ -83,17 +106,18 @@
 \smallskip
 \begin{enumerate}
 \setlength{\itemsep}{0.55em}
-    \item Identify evidence-grounded energy regions and competing hypotheses.
+    \item Improve on our current findings with additional promising energy
+    regions or more informative competing hypotheses.
     \item Complete a physical cross-section measurement and reproducible analysis.
-    \item Have Code proactively propose a discriminating observation,
-    independent archival analysis, or targeted simulation.
+    \item Have the system proactively propose discriminating experiments,
+    astronomical observations, archival analyses, or simulations.
     \item Complete the follow-up with the responsible teams and
     independently verify its results.
     \item Compare astrophysical conclusions before and after measurement.
 \end{enumerate}
 
-\slidenote{Replay supports development; prospective acceptance needs a
-physical measurement. Unexecuted observing applications remain pending.
-Report observations and simulations by their actual evidence type.}
+\slidenote{\textbf{Acceptance requires:} Physical consistency checks
+(orders of magnitude, dimensions, conservation laws, etc.); real experimental
+validation; and additional, independently verified scientific findings.}
 \end{frame}
 

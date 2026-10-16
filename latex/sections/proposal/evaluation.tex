@@ -1,30 +1,35 @@
 % Source page: Deepfield.md Page 60; exactly one frame.
 \setsource{}
-\begin{frame}[c,label=md-60]{VI. Benchmark}
+\begin{frame}[c,label=md-60]{VI. Scientific Discovery Benchmarks}
 \small
 \renewcommand{\arraystretch}{1.25}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.23\textwidth}L{0.70\textwidth}@{}}
 \toprule
-\textbf{Benchmark} & \textbf{Main evaluation targets} \\
+\textbf{Task} & \textbf{Observable evaluation criteria} \\
 \midrule
-\textbf{Literature} & Retrieval, figures, formulas, nuclear data, provenance,
-conflicts, and energy-region evidence. \\[1.0ex]
-\textbf{Hypotheses} & Novelty, plausibility, mechanisms, testability,
-falsifiability, and evidence-driven revision. \\[1.0ex]
-\textbf{Code} & Discovery, reproduction, reuse, adaptation, necessary
-development, numerical / physical validity, reproducibility, uncertainty,
-and cost. \\[1.0ex]
-\textbf{Experiments} & Feasibility, optimization, feedback, reliability,
-information gain, and astrophysical interpretation. \\
+\textbf{Literature} & Evidence coverage and citation support; numerical,
+unit, and figure-reading accuracy; conflict detection. \\[1.1ex]
+\textbf{Hypotheses} & Independently checked novelty and physical plausibility;
+quantitative, discriminating predictions; revision after new evidence. \\[1.1ex]
+\textbf{Analysis and simulation} & Reference error, convergence, physical
+consistency, uncertainty coverage, and reproducibility. \\[1.1ex]
+\textbf{Experiments} & Feasible plans, measurement precision per beam hour,
+reliable execution, and realized scientific benefit. \\
 \bottomrule
 \end{tabular*}\par
-\vspace{0.15cm}
-
-\begin{block}{Evaluation basis}
-Use original data and expert references. Check reproducibility and
-evaluate whether follow-ups distinguish mechanisms and improve
-astrophysical explanations.
-\end{block}
+\medskip
+\textbf{Full-loop outcome:} Additional verified findings, stronger constraints,
+or better discrimination between physical explanations.
+\slidenote{Set task-specific tolerances with experts before evaluation;
+use raw data, reference calculations, and external evidence.}
+\note{Benchmark the complete outputs of literature, hypothesis, code, and
+experimental workflows. Report continuous errors and completion rates, not
+only a single aggregate score. Check uncertainty coverage on cases with known
+truth; real unknown quantities require independent empirical constraints.
+Compare realized information gain or prediction changes with design forecasts.
+Negative or null results count when they provide verified scientific constraints.
+Claims of novelty require independent literature checks; internal rankings and
+LLM confidence are insufficient.}
 \end{frame}
 
 % Source page: Deepfield.md Page 61; exactly one frame.
@@ -42,23 +47,5 @@ astrophysical explanations.
 
 \slidenote{Separate replay, simulation, and prospective physical results.
 Internal rankings and analysis consensus are not independent evidence.}
-\end{frame}
-
-% Source page: Deepfield.md Page 62; exactly one frame.
-\setsource{}
-\begin{frame}[t,label=md-62]{Example Scientific Loop}
-\small
-\slideheading{Illustrative workflow; not an established discovery}
-\smallskip
-\begin{enumerate}
-\setlength{\itemsep}{0.45em}
-    \item \textbf{Literature:} Find a reaction, key energy regions, and conflicting evidence.
-    \item \textbf{Hypothesis:} Propose competing resonance mechanisms.
-    \item \textbf{Code:} Reproduce calculations and predict cross sections and astrophysical consequences.
-    \item \textbf{Experiment:} Measure at JUNA; extract cross sections, rates, and uncertainty.
-    \item \textbf{Follow-up:} Code proposes a discriminating test; run targeted
-    simulations or analyze new / archival observations after coordinated execution.
-    \item \textbf{Interpretation:} Check results independently; return new constraints and unresolved questions to the next cycle.
-\end{enumerate}
 \end{frame}
 

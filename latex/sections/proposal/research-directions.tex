@@ -3,26 +3,21 @@
 \setsource{}
 \begin{frame}[c,label=md-54]{Six Research Directions}
 \small
-\renewcommand{\arraystretch}{1.15}
+\renewcommand{\arraystretch}{1.25}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.35\textwidth}L{0.58\textwidth}@{}}
 \toprule
-\textbf{Direction} & \textbf{Research focus} \\
+\textbf{Direction} & \textbf{Research question} \\
 \midrule
-\textbf{I. Knowledge and discovery} & Evidence, predictive models, experience,
-and long-term research state. \\[1.0ex]
-\textbf{II. Hypotheses} & Doubt, cross-domain and open-world generation,
-robustness, and selection. \\[1.0ex]
-\textbf{III. Analysis and simulation} & Code reuse and development, measurement analysis,
-simulation, and follow-ups. \\[1.0ex]
-\textbf{IV. Experiment design} & Uncertainty-aware, information-driven design
-and optimization. \\[1.0ex]
-\textbf{V. Experimentation} & Beam, astrophysical, and numerical experiments. \\[1.0ex]
-\textbf{VI. Benchmarking} & Literature, hypothesis, code, and experiment evaluation. \\[1.0ex]
+\textbf{I. Knowledge and models} & How can new evidence improve physical models and research decisions? \\[1.0ex]
+\textbf{II. Hypothesis generation} & How can agents propose and refine new, testable physical explanations? \\[1.0ex]
+\textbf{III. Analysis and simulation} & How can reproducible calculations reveal what to investigate next? \\[1.0ex]
+\textbf{IV. Experimental design} & Which feasible measurement best resolves the scientific uncertainty? \\[1.0ex]
+\textbf{V. Scientific experimentation} & What do real measurements and targeted follow-ups establish? \\[1.0ex]
+\textbf{VI. Benchmarking} & What scientific gains does each method add to the full research loop? \\
 \bottomrule
 \end{tabular*}\par
-
-\slidenote{Near term: a complete JUNA Loop. Longer term: transfer
-across reactions, environments, and scientific fields.}
+\slidenote{Near term: one complete JUNA research loop. Longer term:
+transfer across reactions and environments, with evolving research strategies.}
 \end{frame}
 
 % Source page: Deepfield.md Page 55; exactly one frame.
@@ -30,22 +25,26 @@ across reactions, environments, and scientific fields.}
 \begin{frame}[t,label=md-55]{I. Continual Knowledge-Guided Exploration}
 \small
 \begin{itemize}
-\setlength{\itemsep}{0.45em}
-    \item \textbf{Continual evidence alignment:} Integrate evolving literature,
-    nuclear data, and experiments; retain provenance, validity, conflicts,
-    and candidate reactions or energy regions.
-    \item \textbf{Scientific world models:} Discover and revise models that
-    make quantitative predictions, using physically constrained structure,
-    equation, or program search; Direction III implements and tests them.
-    \item \textbf{Experimental experience:} Link configurations, raw data,
-    analyses, anomalies, and successful or failed procedures to hypotheses
-    and physical models.
-    \item \textbf{Long-term research state:} Maintain tasks, dependencies,
-    hypothesis branches, pending experiments, and recovery across weeks or months.
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Align changing evidence:} Link literature, nuclear data,
+    measurements, and observations; reconcile units, conditions, and conflicting results.
+    \item \textbf{Discover physical models:} Search physically constrained
+    equations or programs; revise mechanisms when existing models fail quantitative tests.
+    \item \textbf{Learn from experience:} Connect configurations, anomalies,
+    successful procedures, and failures to their conditions and scientific outcomes.
+    \item \textbf{Sustain research:} Preserve hypothesis branches, task
+    dependencies, and pending experiments; resume work as new evidence arrives.
+    \item \textbf{Test decision value:} Compare fixed and evolving knowledge
+    on reaction priorities, model predictions, and proposed follow-up measurements.
 \end{itemize}
-\slidenote{Evidence records, predictive models, experimental experience,
-and task state serve different roles. Test whether continual evidence
-alignment improves quantitative research decisions.}
+\slidenote{Output: traceable evidence, executable predictive models,
+and reusable research experience.}
+\note{Evidence records describe what has been reported; a scientific world
+model maps physical assumptions and inputs to quantitative predictions.
+Use nuclear reaction and astrophysical models as a starting point, extending
+structure only where data and physical checks justify it. Compare evidence
+updates, experience reuse, and model revisions separately on held-out reactions.
+The aim is improved scientific decisions, rather than database growth alone.}
 \end{frame}
 
 % Source page: Deepfield.md Page 56; exactly one frame.
@@ -77,72 +76,92 @@ falsification tests, and revisions.}
 \end{frame}
 
 % Source page: Deepfield.md Page 57; exactly one frame.
-\setsource{\href{https://doi.org/10.1038/s41586-026-10658-6}{ERA, Nature (2026)}}
-\begin{frame}[t,label=md-57]{III. Data Analysis \& Simulation with Codes}
+\setsource{\href{https://www.nature.com/articles/s41586-026-11044-y}{Paper2Agent, Nature (2026)}; \href{https://www.nature.com/articles/s41586-026-10658-6}{ERA, Nature (2026)}}
+\begin{frame}[t,label=md-57]{III. Data Analysis and Scientific Simulation}
 \small
-\slideheading{Reuse first}
+\slideheading{From reproducible computation to new questions}
 \smallskip
-
-Search $\rightarrow$ reproduce $\rightarrow$ check validity $\rightarrow$ reuse
-$\rightarrow$ adapt or extend $\rightarrow$ fill remaining gaps $\rightarrow$ validate.
+Discover $\rightarrow$ reproduce $\rightarrow$ reuse / extend $\rightarrow$ validate.
 \medskip
 \begin{itemize}
-\setlength{\itemsep}{0.5em}
-    \item Reproduce and reuse reaction, network, stellar, and analysis
-    software; verify reference results and validity.
-    \item Adapt or extend first; develop new code only for unmet needs,
-    guided by execution feedback and numerical / physical checks.
-    \item Infer cross sections and rates; check calibration, background,
-    efficiency, and statistical / systematic uncertainty.
-    \item After analysis, \textbf{proactively propose discriminating
-    observations, archival analyses, or targeted simulations}.
-    \item Run astrophysical simulations and analyze observations; archive
-    code, environments, provenance, figures, and research reports.
+\setlength{\itemsep}{0.55em}
+    \item \textbf{Build on existing software:} Reproduce reference cases;
+    adapt validated tools and develop new code where capabilities are missing.
+    \item \textbf{Infer nuclear quantities:} Model calibration, background,
+    and efficiency; extract cross sections and rates with correlated uncertainties.
+    \item \textbf{Connect to astrophysics:} Propagate rates through reaction
+    networks and stellar models; quantify changes in abundances and observables.
+    \item \textbf{Propose follow-ups:} Identify unresolved mechanisms and
+    suggest discriminating observations, archival analyses, or controlled simulations.
+    \item \textbf{Deliver reproducible results:} Preserve data, code,
+    environments, physical checks, and the calculations behind each conclusion.
 \end{itemize}
+\note{Use execution feedback and independent reference cases to improve code.
+Check dimensions, conservation laws, numerical convergence, validity ranges,
+and known limits. Sensitivity ranks influential inputs; combine it with their
+uncertainties to prioritize new measurements. Account for astrophysical nuisance
+parameters when interpreting nuclear-rate changes. Validate surrogate models
+on independent simulations before using them for inference or experimental
+design. Follow-up proposals arise from unresolved scientific questions rather
+than a mandatory extra step after every analysis.}
 \end{frame}
 
 % Source page: Deepfield.md Page 58; exactly one frame.
-\setsource{\href{https://doi.org/10.1103/PhysRevAccelBeams.25.044601}{Miskovich et al., PRAB 25, 044601 (2022)}; \href{https://doi.org/10.1103/PhysRevResearch.7.013074}{Tsintari et al., PRR 7, 013074 (2025)}}
-\begin{frame}[t,label=md-58]{IV. Experimental Design \& Optimization}
+\setsource{\href{https://arxiv.org/abs/2302.14545}{Bayesian experimental design}; \href{https://doi.org/10.1103/PhysRevAccelBeams.25.044601}{SECAR online optimization (2022)}; \href{https://doi.org/10.1103/PhysRevResearch.7.013074}{SECAR measurements (2025)}}
+\begin{frame}[t,label=md-58]{IV. Experimental Design and Optimization}
 \small
 \begin{itemize}
 \setlength{\itemsep}{0.65em}
-    \item \textbf{Formulate:} Model observables, competing hypotheses,
-    uncertainty, and constraints; target information gain or parameter precision.
-    \item \textbf{Design offline:} Use Bayesian design and multi-objective
-    optimization for energies, beam, target, detectors, time, and resources.
-    \item \textbf{Simulate:} Background, efficiency, response, feasibility, and objective trade-offs.
-    \item \textbf{Adapt online:} Bayesian updates and optimization using measurements and scientist feedback.
-    \item \textbf{Prepare execution:} Validate interfaces in simulation or
-    replay; assess Code-proposed follow-ups and coordinate observations
-    with scientists and observing teams.
+    \item \textbf{Define the scientific utility:} Target model discrimination,
+    parameter precision, or reduced uncertainty in astrophysical predictions.
+    \item \textbf{Choose informative measurements:} Use Bayesian experimental
+    design to select energies, observables, and exposure time under realistic constraints.
+    \item \textbf{Optimize instrument performance:} Use simulation and Bayesian
+    optimization for beam settings, efficiency, background, and resource trade-offs.
+    \item \textbf{Adapt from feedback:} Update physical inference with new data;
+    revise the next measurement and stop when expected benefit no longer justifies cost.
+    \item \textbf{Prepare feasible follow-ups:} Test plans in simulation or
+    replay; coordinate calibration, beam time, and observation or archival access.
 \end{itemize}
-
-\medskip
-\textbf{Output:} Executable plans, configurations, calibration, and adjustment strategies; Direction V executes them.
+\slidenote{Output: executable plans with predicted scientific benefit,
+uncertainty, resource needs, and criteria for adjustment.}
+\note{Bayesian experimental design chooses measurements by expected utility,
+such as expected information gain about a physical parameter or model.
+Bayesian optimization searches expensive black-box objectives, such as
+instrument transmission; it can support design but is not synonymous with
+information-driven design. SECAR demonstrates instrument optimization and
+ML-assisted measurements, not an established autonomous JUNA research loop.
+Include statistical and systematic uncertainty, model discrepancy, and
+robustness to prior choices. Scientists conduct actual experiments; design
+recommendations must remain interpretable and inspectable.}
 \end{frame}
 
 % Source page: Deepfield.md Page 59; exactly one frame.
 \setsource{}
-\begin{frame}[t,label=md-59]{V. Experimentation Implementation}
+\begin{frame}[t,label=md-59]{V. Scientific Experimentation}
 \small
 \begin{itemize}
-\setlength{\itemsep}{0.9em}
-    \item \textbf{Beam experiments:} Experiment Agent and the human team
-    perform real measurements, calibration, background studies, and repetitions.
-    \item \textbf{Astrophysical experiments:} Carry out Code-proposed
-    observations with scientists and observing teams, or analyze independent
-    archives to test nuclear-constrained predictions.
-    \item \textbf{Numerical experiments:} Code Agent reuses or extends
-    reaction and stellar codes for controlled variations, competing and
-    counterfactual models, and uncertainty propagation.
+\setlength{\itemsep}{0.85em}
+    \item \textbf{Nuclear measurements:} Scientists conduct beam experiments
+    with agent assistance; acquire calibrated data, background controls,
+    and independent checks of cross sections.
+    \item \textbf{Astronomical observations:} Test nuclear-constrained
+    predictions against new observations or independent archives;
+    account for astrophysical and observational uncertainties.
+    \item \textbf{Numerical experiments:} Vary rates and mechanisms under
+    controlled assumptions; test convergence and propagate uncertainty
+    to astrophysical predictions.
+    \item \textbf{New experimental approaches (challenge):} Explore novel
+    measurement methods and configurations to access previously inaccessible
+    reactions or energy regions; test feasibility and scientific benefit.
 \end{itemize}
-
-\medskip
-Beam measurement is the first experiment type; the post-measurement
-observation or simulation is the second.
-\slidenote{Preserve records and negative results; return supported,
-excluded, and unresolved explanations to the next cycle. Distinguish
-simulation deductions from independent observational evidence.}
+\slidenote{Output: real measurement results, targeted follow-up results,
+and independently checked physical interpretations.}
+\note{The initial beam measurement and the post-measurement follow-up belong
+to one research loop. A follow-up may be a new observation, an independent
+archival analysis, or a targeted numerical experiment. Record their evidence
+types separately: a simulation tests consequences under assumptions, whereas
+observations constrain nature. A proposed observing program is not a completed
+observation. Preserve null results, unresolved disagreements, and all raw data
+and run conditions needed to reproduce the analysis.}
 \end{frame}
-

@@ -1,80 +1,135 @@
 \subsection{System Components}
 % Source page: Deepfield.md Page 47; exactly one frame.
-\setsource{}
+\setsource{\href{https://www.nature.com/articles/sdata201618}{FAIR, Scientific Data (2016)}; \href{https://www.nature.com/articles/s41586-026-11044-y}{Paper2Agent, Nature (2026)}}
 \begin{frame}[t,label=md-47]{Data Engineering}
 \small
 \begin{itemize}
 \setlength{\itemsep}{0.65em}
-    \item \textbf{Acquire:} Papers, formulas, tables, curves, nuclear data, experiments, simulations, and observations.
-    \item \textbf{Normalize:} Identifiers, units, energy frames, metadata, and validity ranges.
-    \item \textbf{Align:} Connect modalities by reaction, energy region, conditions, and observables.
-    \item \textbf{Preserve provenance:} Originals, versions, calibration, uncertainty, covariance, and conflicts.
-    \item \textbf{Build datasets:} Expert-reviewed examples; independent splits by source, time, or reaction.
+    \item \textbf{Research objects:} Link papers, nuclear data, code, measurements,
+    simulations, and observations through persistent identifiers.
+    \item \textbf{Grounded extraction:} Trace formulas, tables, plots, and claims
+    to source locations; check extracted values against the originals.
+    \item \textbf{Scientific metadata:} Encode reactions, units, energy frames,
+    validity, and uncertainty/covariance; distinguish measurements from predictions.
+    \item \textbf{Agent access:} Combine metadata filters with text and image
+    retrieval; return focused evidence and links to complete artifacts.
+    \item \textbf{Learning datasets:} Curate reviewed research trajectories and
+    failures; separate training, optimization, and frozen tests by source, time,
+    and reaction.
 \end{itemize}
+\note{FAIR motivates persistent identifiers, machine-readable metadata, and
+provenance. Paper2Agent represents paper outputs as resources and executable
+methods. For nuclear astrophysics, we propose linked records that retain
+calibration, conflicting evidence, and covariance. Dataset splits should group
+related papers and reused measurements to reduce leakage. Reviewed trajectories
+can support agent learning; frozen test cases remain outside optimization.}
 \end{frame}
 
 % Source page: Deepfield.md Page 48; exactly one frame.
-\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\setsource{\href{https://www.nature.com/articles/s41586-026-10644-y}{Co-Scientist, Nature (2026)}; \href{https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents}{Agent harnesses, Anthropic (2025)}}
 \begin{frame}[t,label=md-48]{Harness Engineering}
 \small
 \begin{itemize}
 \setlength{\itemsep}{0.65em}
-    \item \textbf{Orchestrate:} Supervisor-managed dependencies, handoffs, priorities, and budgets.
-    \item \textbf{Execute:} Parallel independent work; respect measurement and analysis dependencies.
-    \item \textbf{Recover:} Track runs, checkpoints, failures, and affected outputs before resubmission.
-    \item \textbf{Workspace:} Natural-language goals and feedback; inspect
-    hypothesis branches, evidence, data, code, and research progress.
-    \item \textbf{Evaluate:} Record traces, costs, and outputs; compare workflows independently.
+    \item \textbf{Adaptive orchestration:} Delegate bounded tasks; revise plans
+    and parallelism according to dependencies, evidence, and computational cost.
+    \item \textbf{Durable execution:} Track job IDs, checkpoints, dependencies,
+    and artifact versions; resume long jobs without duplicating actions.
+    \item \textbf{Shared workspace:} Keep tasks, evidence, branches, and run
+    histories inspectable; give specialists focused contexts and explicit handoffs.
+    \item \textbf{Feedback control:} Use tool results, physical checks, and human
+    experimental feedback to revise plans, recover failures, or stop unproductive branches.
+    \item \textbf{Evaluate and evolve:} Test orchestration changes on held-out
+    tasks for scientific value, reliability, human effort, and cost.
 \end{itemize}
+\note{Co-Scientist motivates asynchronous task allocation and context-based
+coordination. Anthropic's long-running coding harness illustrates persistent
+progress records, incremental execution, and recovery across sessions. We adapt
+these mechanisms to scientific jobs and scientist-run experiments. The harness
+controls execution and state; prompt optimization and memory curation are
+separate mechanisms. Harness changes are evaluated rather than assumed to help.}
 \end{frame}
 
 % Source page: Deepfield.md Page 49; exactly one frame.
-\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}; \href{https://doi.org/10.1038/s41586-026-10658-6}{ERA, Nature (2026)}}
+\setsource{\href{https://arxiv.org/abs/2507.19457}{GEPA (2025)}; \href{https://www.nature.com/articles/s41586-026-10658-6}{ERA, Nature (2026)}}
 \begin{frame}[t,label=md-49]{Prompt Engineering}
 \small
 \begin{itemize}
 \setlength{\itemsep}{0.65em}
-    \item \textbf{Roles:} Define scientific responsibility, tools, and collaboration boundaries.
-    \item \textbf{Tasks:} State questions, assumptions, units, reference frames, validity, and outputs.
-    \item \textbf{Evidence:} Require competing explanations, predictions, uncertainty, and falsification criteria.
-    \item \textbf{Code priority:} Search, reproduce, and reuse before adapting or developing.
-    \item \textbf{Feedback:} Version prompts; evaluate changes against scientist feedback and diagnostics.
+    \item \textbf{Task contracts:} Specify scientific goals, assumptions,
+    constraints, available tools, and measurable success criteria.
+    \item \textbf{Research outputs:} Request predictions, evidence links,
+    uncertainty, and falsification tests in schemas matched to each role.
+    \item \textbf{Scientific exploration:} Generate competing mechanisms, seek
+    counterevidence, and choose informative tests; explain decisions with evidence.
+    \item \textbf{Reusable guidance:} Supply concise examples and tested
+    procedures; retrieve specialized instructions when relevant.
+    \item \textbf{Reflective optimization:} Use traces, failures, and expert
+    feedback to evolve prompts with methods such as GEPA; test on held-out reactions.
 \end{itemize}
+\note{GEPA proposes prompt changes by reflecting on execution trajectories
+and feedback. ERA shows how task descriptions, evaluation metrics, and
+scientific advice guide empirical software search. We propose adapting these
+ideas to role-specific nuclear-astrophysics tasks. Prompt adaptation changes
+instructions rather than model weights. Improvements are checked on reactions
+and sources excluded from prompt optimization, using physical and expert
+criteria as well as task scores.}
 \end{frame}
 
 % Source page: Deepfield.md Page 50; exactly one frame.
-\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\setsource{\href{https://arxiv.org/abs/2510.04618}{ACE (2025)}; \href{https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents}{Context engineering, Anthropic (2025)}}
 \begin{frame}[t,label=md-50]{Context Engineering}
 \small
 \begin{itemize}
 \setlength{\itemsep}{0.65em}
-    \item \textbf{Working context:} Current question, constraints, evidence, hypotheses, tool feedback, and next actions.
-    \item \textbf{Persistent memory:} Separate shared task state, long-term
-    evidence and experience, and complete research artifacts.
-    \item \textbf{Retrieve and compress:} Preserve numbers, units, correlated errors, counterevidence, and disagreements.
-    \item \textbf{Version:} Track provenance, revisions, validation status, and obsolete conclusions.
-    \item \textbf{Handoff and resume:} Share task IDs and artifacts; recover valid state from checkpoints.
+    \item \textbf{On-demand context:} Store complete artifacts externally;
+    load evidence, code, and tool results as the current task requires.
+    \item \textbf{Memory layers:} Separate working state, research episodes,
+    and reusable strategies; attach source, version, and validation status.
+    \item \textbf{Scientific fidelity:} Preserve values, units, uncertainty/covariance,
+    counterevidence, and unresolved disagreements during compression and handoffs.
+    \item \textbf{Incremental learning:} Reflect on outcomes and curate validated
+    lessons; update or retire individual entries rather than rewriting all memory.
+    \item \textbf{Transfer and evaluate:} Share artifact references and open
+    questions across agents; measure memory's benefit on held-out research tasks.
 \end{itemize}
+\note{Anthropic describes loading context through lightweight references,
+compaction, persistent notes, and focused specialist contexts. ACE uses
+reflection and curation to incrementally update reusable strategies. Our
+scientific adaptation preserves quantitative evidence and its validation status.
+Memory entries record successful methods and diagnosed failures, with revisions
+when evidence changes. Context-based learning is evaluated separately from
+parameter training.}
 \end{frame}
 
 % Source page: Deepfield.md Page 51; exactly one frame.
-\setsource{\href{https://doi.org/10.1038/s41586-026-11044-y}{Paper2Agent, Nature (2026)}; \href{https://doi.org/10.1038/s41586-026-10658-6}{ERA, Nature (2026)}}
+\setsource{\href{https://www.nature.com/articles/s41586-026-11044-y}{Paper2Agent, Nature (2026)}; \href{https://www.anthropic.com/engineering/advanced-tool-use}{Advanced tool use, Anthropic (2025)}}
 \begin{frame}[t,label=md-51]{Tool Use}
 \small
 \slideheading{Invocation loop}
 \smallskip
-
-Scientific purpose $\rightarrow$ tool selection $\rightarrow$ input checks
-$\rightarrow$ execution $\rightarrow$ numerical and physical checks
-$\rightarrow$ state update.
+Goal $\rightarrow$ discover $\rightarrow$ execute $\rightarrow$ verify $\rightarrow$ update.
 \medskip
 \begin{itemize}
 \setlength{\itemsep}{0.55em}
-    \item \textbf{Library:} Literature and nuclear data, scientific software, code execution, analysis, instruments.
-    \item \textbf{Reuse:} Reproduce paper methods before exposing MCP tools, APIs, or wrappers.
-    \item \textbf{Contracts:} Versions, formats, units, frames, validity, costs, and invocation conditions.
-    \item \textbf{Feedback:} Diagnose failures; distinguish execution success, numerical validity, and scientific evidence.
+    \item \textbf{Discover on demand:} Find relevant literature, data, simulation,
+    and instrument tools; load only the needed schemas and examples.
+    \item \textbf{Validated reuse:} Reproduce paper workflows; package reusable
+    tools with fixed environments, reference datasets, and regression tests.
+    \item \textbf{Scientific contracts:} Specify inputs/outputs, units, energy
+    frames, valid regimes, uncertainty, versions, and expected costs.
+    \item \textbf{Execution feedback:} Return structured results and diagnostics;
+    check numerical and physical validity before interpreting outputs.
+    \item \textbf{Tool evolution:} Use failure traces to improve descriptions,
+    wrappers, and tests; evaluate changes on independent scientific tasks.
 \end{itemize}
+\note{Paper2Agent validates paper-derived tools against reference results
+and exposes resources, tools, and workflow instructions through MCP. Anthropic's
+advanced tool-use work motivates loading tool definitions on demand. Its
+Writing effective tools for agents article motivates improving tool interfaces
+from evaluation traces. We adapt these mechanisms to scientific software and
+scientist-run instruments. MCP supplies an interface; numerical checks and real
+experimental validation establish scientific usefulness.}
 \end{frame}
 
 % Source page: Deepfield.md Page 52; exactly one frame.
@@ -82,33 +137,54 @@ $\rightarrow$ state update.
 \begin{frame}[t,label=md-52]{Multimodal Fusion and Model Training}
 \small
 \begin{itemize}
-\setlength{\itemsep}{0.45em}
-    \item \textbf{Align evidence:} Match literature, nuclear data, spectra,
-    energy levels and reaction networks, simulations, and observations by reaction,
-    energy, and environment.
-    \item \textbf{Reason and quantify:} Combine mechanistic reasoning with
-    numerical predictions and uncertainty to evaluate competing hypotheses.
-    \item \textbf{Establish baselines:} First test existing models, retrieval,
-    and scientific tools; compare separate and combined use.
-    \item \textbf{Explore training:} With expert-reviewed samples, study domain
-    continual pretraining, SFT, and role-specific LoRA / reinforcement learning.
-    \item \textbf{Evaluate contributions:} Separate knowledge updates,
-    prompt/code strategies, and parameter training; distinguish LLM confidence
-    from physical uncertainty.
+\setlength{\itemsep}{0.65em}
+    \item \textbf{Grounded fusion:} Connect text, equations, spectra, nuclear
+    measurements, simulations, and observations through shared physical quantities.
+    \item \textbf{Quantitative reasoning:} Couple language reasoning with
+    physical solvers and statistical inference; propagate measurement and model uncertainty.
+    \item \textbf{Workflow learning (SFT):} Learn scientific workflows from
+    expert-reviewed, reproducible trajectories; use LoRA for efficient adaptation.
+    \item \textbf{Hypothesis learning (RL):} Improve hypothesis generation using
+    feedback on novelty, physical plausibility, testability, and supporting evidence.
+    \item \textbf{Continual learning:} Self-train on newly validated trajectories
+    and results; test transfer, retention, and gains beyond retrieval or prompt updates.
 \end{itemize}
+\note{XunZi motivates multimodal evidence fusion and experimental validation;
+IdeaScientist motivates role-specific reinforcement learning for scientific
+ideation. These are proposed adaptations to nuclear astrophysics. SFT and RL
+specify training objectives; LoRA is a parameter-efficient adaptation method
+that can be used with either. Curate new training examples only after independent
+checks, retaining provenance and uncertainty/covariance. Compare frozen-model,
+retrieval, prompt, memory, and parameter-training baselines on held-out tasks.
+Check both transfer and forgetting. LLM confidence is not physical uncertainty.}
 \end{frame}
 
 % Source page: Deepfield.md Page 53; exactly one frame.
-\setsource{}
+\setsource{\href{https://www.nature.com/articles/s41586-026-10644-y}{Co-Scientist, Nature (2026)}; \href{https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents}{Agent evals, Anthropic (2026)}}
 \begin{frame}[t,label=md-53]{Validation}
 \small
 \begin{itemize}
 \setlength{\itemsep}{0.65em}
-    \item \textbf{Software:} Reference reproduction, convergence, and executable regression cases.
-    \item \textbf{Physics:} Units, dimensions, scales, conservation, positivity, and model validity.
-    \item \textbf{Uncertainty:} Calibration, interval coverage, and stability across reasonable analyses.
-    \item \textbf{Evidence:} Independent checks against competing predictions; distinguish simulations from observations.
-    \item \textbf{System:} Re-evaluate changes; track outcomes, failures, human input, and resource costs.
+    \item \textbf{Executable outcomes:} Reproduce reference results; check
+    convergence, regression cases, and actual outputs against task requirements.
+    \item \textbf{Physical checks:} Verify units, dimensions, orders of magnitude,
+    conservation laws, valid regimes, and known limiting cases.
+    \item \textbf{Uncertainty checks:} Propagate errors and correlations;
+    assess interval coverage, model sensitivity, and robustness to new data.
+    \item \textbf{Scientific evidence:} Test competing predictions with real
+    experiments and astronomical observations; independently verify new findings.
+    \item \textbf{Feedback and revalidation:} Diagnose failures, revise the
+    responsible components, and retest on held-out tasks for scientific value,
+    reliability, and cost.
 \end{itemize}
+\note{Evaluate actual artifacts and environment outcomes, rather than an
+agent's claim of success. Use executable checks, expert review, and independent
+empirical evidence at their appropriate levels. Assess coverage on synthetic or
+reference cases with known truth; preserve systematic errors and covariance.
+Internal rankings and agent agreement do not replace experimental validation.
+Trace failures to data, prompts, memory, tools, orchestration, or model training;
+make targeted revisions and retest against frozen cases. Use repeated trials
+and matched resource budgets, recording human effort and additional scientific
+findings. Keep optimization cases separate from the final evaluation set.}
 \end{frame}
 

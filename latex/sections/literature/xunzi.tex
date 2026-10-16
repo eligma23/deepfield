@@ -1,5 +1,5 @@
 % Source page: Deepfield.md Page 12; exactly one frame.
-\setsource{\href{https://doi.org/10.1038/s41551-026-01769-6}{XunZi, Nature Biomedical Engineering (2026)}}
+\setsource{\href{https://doi.org/10.1038/s41551-026-01769-6}{XunZi, Nature (2026)}}
 \begin{frame}[c,label=md-12]{XunZi: multi-model data fusion}
 \small
 \textbf{Motivation:} Reduce hallucinations with multimodal empirical data.
@@ -17,7 +17,7 @@
     \textbf{XunZi-R}\\
     Reasoning model\\[0.25em]
     Continual pretraining\\
-    + supervised fine-tuning
+    + Supervised fine-tuning
     \medskip
 
     \textbf{XunZi-M}\\
@@ -29,15 +29,15 @@
         \setlength{\itemsep}{0.35em}
         \item Publications
         \item Structured biological data
-        \item CoT\\[0.15em]
-        {\footnotesize Manually checked}
+        \item Mechanism CoT\\[0.15em]
+        {\footnotesize (manually checked)}
     \end{enumerate}
 \end{column}
 \end{columns}
 \end{frame}
 
 % Source page: Deepfield.md Page 13; exactly one frame.
-\setsource{\href{https://doi.org/10.1038/s41551-026-01769-6}{XunZi, Nature Biomedical Engineering (2026)}}
+\setsource{\href{https://doi.org/10.1038/s41551-026-01769-6}{XunZi, Nature (2026)}}
 \begin{frame}[t,label=md-13]{XunZi: multi-model data fusion}
 \small
 \slideheading{XunZi-R: Mistral-7B}
@@ -65,14 +65,15 @@
 \end{frame}
 
 % Source page: Deepfield.md Page 14; exactly one frame.
-\setsource{\href{https://doi.org/10.1038/s41551-026-01769-6}{XunZi, Nature Biomedical Engineering (2026)}}
+\setsource{\href{https://doi.org/10.1038/s41551-026-01769-6}{XunZi, Nature (2026)}}
 \begin{frame}[t,label=md-14]{XunZi: multi-model data fusion}
 \small
 \slideheading{XunZi-M: Two-layer GCN}
 \smallskip
 \begin{itemize}
 \setlength{\itemsep}{0.45em}
-    \item \textbf{Data:} 2.81M PPI records + 47,900 GO terms; 621,000 nodes and 6.09M edges.
+    \item \textbf{Data:} 2.81M PPI records + 47,900 GO terms; 
+    \item \textbf{Graph:} 621,000 nodes and 6.09M edges.
     \item Predict disease-specific gene relevance with binary cross-entropy.
 \end{itemize}
 
@@ -82,7 +83,7 @@
 \]
 \begin{itemize}
 \setlength{\itemsep}{0.45em}
-    \item \textbf{Output:} Continuous scores rank candidate targets.
+    \item \textbf{Output:} Continuous scores in $[0, 1]$ are used to rank candidate targets.
     \item \textbf{Fusion:} Concatenate graph features with $s$; a linear layer produces the final relevance score.
 \end{itemize}
 \end{frame}

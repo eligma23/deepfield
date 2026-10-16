@@ -1,13 +1,13 @@
 % Source page: Deepfield.md Page 7; exactly one frame.
-\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\setsource{\href{https://doi.org/10.1038/s41586-026-10644-y}{Co-Scientist, Nature (2026)}}
 \begin{frame}[c,label=md-7]{Co-Scientist: focus on generating hypotheses}
 \small
-\textbf{Three techniques}
+\textbf{Core reasoning steps}
 \begin{enumerate}
     \setlength{\itemsep}{0.2em}
-    \item Self-play debate
-    \item Tournament-based evolution
-    \item Agentic capability
+    \item Multi-agent self-play scientific debate
+    \item Tournament-based hypothesis comparison and ranking
+    \item Evolution with meta-review and refinement
 \end{enumerate}
 \smallskip
 \begin{figure}
@@ -15,10 +15,17 @@
 \includegraphics[width=0.86\textwidth]{architecture_co_scientist_with notes.png}
 \caption{Co-Scientist architecture with annotated research concepts.}
 \end{figure}
+\note{The Introduction describes three thinking and reasoning steps:
+scientific debate generates hypotheses; tournament comparisons rank them;
+hypothesis evolution generates improved candidates. These are mechanisms
+within the broader test-time compute scaling paradigm. The paper separately
+describes agentic self-critique and tool use as supporting capabilities.
+The abstract groups the technical contributions into an asynchronous
+multi-agent architecture and a tournament evolution process.}
 \end{frame}
 
 % Source page: Deepfield.md Page 8; scaling and open question on separate frames.
-\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\setsource{\href{https://www.nature.com/articles/s41586-026-10644-y}{Co-Scientist, Nature (2026)}}
 \begin{frame}[c,label=md-8]{Co-Scientist: test-time compute scaling}
 \footnotesize
 \begin{figure}
@@ -40,28 +47,44 @@ ranked hypotheses.
 \end{frame}
 
 % The open question is highlighted on its own page, without a block.
-\setsource{\href{https://doi.org/10.1038/s41586-026-10644-y}{Co-Scientist, Nature (2026): Discussion and Methods}}
+\setsource{\href{https://doi.org/10.1038/s41586-026-10644-y}{Co-Scientist, Nature (2026)}}
 \begin{frame}[c,label=open-question]{Open Question: Emergence}
 \small
 \slideheading{The paper's perspective}
 \medskip
-Context memory and iterative refinement form an increasingly coherent,
-interconnected representation of the scientific research process.
-\medskip
-
-Meta-review carries lessons into subsequent prompts, enabling improvement
-without updating model parameters.
-\vspace{0.55cm}
+The authors interpret persistent context and iterative self-improvement as an
+\textbf{emergent internal model of the scientific research process}.
+\smallskip
+\begin{itemize}
+    \setlength{\itemsep}{0.4em}
+    \item \textbf{Knowledge integration:} Connect accumulated knowledge,
+    synthesize information, identify gaps, and guide further hypothesis exploration.
+    \item \textbf{Meta-review feedback:} Distil patterns from reviews and debates
+    into subsequent prompts, improving generation and critique without parameter updates.
+    \item \textbf{Adaptive orchestration:} The Supervisor uses progress statistics
+    to allocate compute across agents and guide subsequent search.
+\end{itemize}
+\vspace{0.25cm}
 
 \slideheading{Open question}
 \medskip
 {\bfseries
 Can scientific intelligence emerge from this evolving internal model
 of the research process?\par}
+\note{The Discussion interprets context memory and iterative self-improvement
+as an emergent internal model, meaning a progressively connected knowledge
+state that supports information synthesis and knowledge-gap identification.
+The Methods explain how research overviews guide further hypothesis generation,
+how Meta-review feeds patterns from reviews and tournament debates into later
+prompts, and how the Supervisor uses progress statistics to schedule agents.
+These mechanisms support continued improvement with test-time compute without
+updating the underlying model parameters. The internal model is not an explicit
+symbolic world model; the emergence of scientific intelligence is the open
+question posed on this slide, rather than an experimentally established result.}
 \end{frame}
 
 % Source page: Deepfield.md Page 9; exactly one frame.
-\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\setsource{\href{https://www.nature.com/articles/s41586-026-10644-y}{Co-Scientist, Nature (2026)}}
 \begin{frame}[t,label=md-9]{Co-Scientist: focus on generating hypotheses}
 \small
 
@@ -79,7 +102,7 @@ of the research process?\par}
 \end{frame}
 
 % Source page: Deepfield.md Page 10; exactly one frame.
-\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+\setsource{\href{https://www.nature.com/articles/s41586-026-10644-y}{Co-Scientist, Nature (2026)}}
 \begin{frame}[c,label=md-10]{Scientific Exploration}
 \centering
 {\Large\bfseries\usebeamercolor[fg]{structure} Search + Optimization\par}
@@ -95,23 +118,49 @@ Exploration $\longleftrightarrow$ Exploitation\par}
 \end{frame}
 
 % Source page: Deepfield.md Page 11; exactly one frame.
-\setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
+% Define the row helper outside the labeled frame so Beamer can store the frame.
+\newcommand{\scientifictechniqueentry}[4]{%
+    \path[fill=#2,draw=structure.fg!12,line width=0.25pt,rounded corners=2pt]
+        (0.001,{#1+0.46}) rectangle (0.999,{#1-0.46});
+    \node[anchor=west,inner sep=0,align=flush left,text width=0.28\textwidth,
+        font=\small\bfseries,text=structure.fg] at (0.025,#1) {#3};
+    \node[anchor=west,inner sep=0,align=flush left,text width=0.62\textwidth,
+        font=\small,text=black] at (0.355,#1) {#4};
+}
+\setsource{\href{https://www.nature.com/articles/s41586-026-10644-y}{Co-Scientist, Nature (2026)}}
 \begin{frame}[c,label=md-11]{New techniques to be explored...}
-\footnotesize
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.31\textwidth}L{0.64\textwidth}@{}}
-\toprule
-\textbf{Technique} & \textbf{Current limitation in Co-Scientist} \\
-\midrule
-World model & Context-based reasoning; no explicit executable scientific world model. \\[0.65ex]
-Reinforcement learning & Research feedback does not update policy parameters online. \\[0.65ex]
-Bayesian design & No complete information-gain-driven experimental design loop. \\[0.65ex]
-Formal verification & LLM review rather than mathematical or physical proofs. \\[0.65ex]
-Causal discovery & Mechanistic proposals without a unified causal-discovery algorithm. \\[0.65ex]
-Multi-objective search & Several criteria; candidates mainly organized by tournaments. \\[0.65ex]
-Continual learning & Persistent context rather than continual parameter learning. \\[0.65ex]
-Closed-loop experiments & Real validation, without fully automated online learning. \\[0.65ex]
-\bottomrule
-\end{tabular*}\par
+\small
+\centering
+\begin{tikzpicture}[x=\textwidth,y=1cm]
+\node[anchor=west,inner sep=0,font=\footnotesize\bfseries,text=black!55]
+    at (0.025,0.72) {Technique};
+\node[anchor=west,inner sep=0,font=\footnotesize\bfseries,text=black!55]
+    at (0.355,0.72) {Role and possible application};
+\scientifictechniqueentry{0}{structure.fg!5}{World model}{%
+    \textbf{Predict observable consequences} of hypotheses to support reasoning
+    and experiment planning.}
+\scientifictechniqueentry{-1.08}{white}{Reinforcement\\learning}{%
+    \textbf{Generate hypotheses} using rewards from scientific evaluation
+    and experiments.}
+\scientifictechniqueentry{-2.16}{structure.fg!5}{Bayesian design}{%
+    \textbf{Guide the experimental loop:} select informative tests and update
+    beliefs from results.}
+\scientifictechniqueentry{-3.24}{white}{Causal discovery}{%
+    \textbf{Infer causal relationships} through data and interventions.}
+\scientifictechniqueentry{-4.32}{structure.fg!5}{Multi-objective\\search}{%
+    \textbf{Select hypotheses} by balancing novelty, plausibility,
+    testability, and cost.}
+\scientifictechniqueentry{-5.40}{white}{Continual learning}{%
+    \textbf{Self-train the model} on validated hypotheses and research trajectories.}
+\end{tikzpicture}\par
+\note{These are proposed extensions to scientific reasoning and discovery.
+The world model predicts observable consequences of hypotheses to support
+reasoning and experiment planning.
+Reinforcement learning improves the hypothesis-generation policy through
+scientific evaluations and experimental feedback. Bayesian design supports
+sequential experiment selection and belief updating. Causal discovery targets
+causal relationships and mechanistic explanations. Continual learning is
+proposed here for ongoing model self-training on validated generated
+hypotheses and research trajectories.}
 \end{frame}
 

@@ -1,77 +1,53 @@
 \subsection{Research Loop and Multi-Agent Architecture}
-% Source page: Deepfield.md Page 42; exactly one frame.
-\setsource{\href{https://doi.org/10.1038/s41586-026-10652-y}{Robin, Nature (2026)}}
-\begin{frame}[t,label=md-42]{Research Loop}
+% Source page: Deepfield.md Page 62; replaces the original Page 42 loop.
+\setsource{}
+\begin{frame}[t,label=md-42]{Example Scientific Loop}
+\label{md-62}
 \small
-\slideheading{One Loop connects two experiment types}
+\slideheading{Illustrative workflow; not an established discovery}
 \smallskip
 \begin{enumerate}
 \setlength{\itemsep}{0.45em}
-    \item \textbf{Literature:} Identify reactions, energy regions, and evidence
-    under scientist-defined goals and constraints.
-    \item \textbf{Hypothesis + Code:} Develop competing mechanisms and
-    quantitative predictions using verified, reusable tools.
-    \item \textbf{First experiment:} Experiment Agent and the human team
-    optimize and perform a real cross-section measurement.
-    \item \textbf{Code-led follow-up:} Infer cross sections and rates;
-    propose discriminating observations, archival analyses, or simulations.
-    \item \textbf{Execution:} Code runs simulations and analyzes data;
-    Experiment coordinates new observations with scientists and observing teams.
-    \item \textbf{Interpretation and next cycle:} Independently verify results;
-    scientists judge explanations and update evidence, models, and questions.
+    \item \textbf{Literature:} Find a reaction, key energy regions, and conflicting evidence.
+    \item \textbf{Hypothesis:} Propose competing resonance mechanisms.
+    \item \textbf{Code:} Reproduce calculations and predict cross sections and astrophysical consequences.
+    \item \textbf{Experiment:} Measure at JUNA; extract cross sections, rates, and uncertainty.
+    \item \textbf{Follow-up:} Code proposes a discriminating test; run targeted
+    simulations or analyze new / archival observations after coordinated execution.
+    \item \textbf{Interpretation:} Check results independently; return new constraints and unresolved questions to the next cycle.
 \end{enumerate}
 \end{frame}
 
-% Source page: Deepfield.md Page 43; exactly one frame.
-\setsource{}
-\begin{frame}[c,label=md-43]{Core MAS Roles}
-\footnotesize
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.18\textwidth}L{0.75\textwidth}@{}}
-\toprule
-\textbf{Role} & \textbf{Main responsibility} \\
-\midrule
-\textbf{Literature} & Evidence, conflicts, knowledge gaps, reactions and energy regions;
-reusable data, code, and methods. \\[0.5ex]
-\textbf{Hypothesis} & Generate, debate, refine, and select competing mechanisms;
-predictions, falsification, and feedback from both experiment types. \\[0.5ex]
-\textbf{Code} & Reuse, adapt, or develop tools; infer cross sections and rates;
-run astrophysical simulations and proactively propose follow-ups. \\[0.5ex]
-\textbf{Experiment} & Feasible designs, beam measurements, and instrument feedback;
-coordinate new observations with scientists and observing teams. \\[0.5ex]
-\textbf{Verification} & Independent evidence, physical and numerical checks;
-uncertainty, reproducibility, and external validation. \\[0.5ex]
-\textbf{Supervisor} & Tasks, shared state, memory, dependencies, resources,
-and recovery. \\[0.5ex]
-\bottomrule
-\end{tabular*}\par
-
-\slidenote{Scientists set and revise goals and judge scientific conclusions.
-Research directions define capabilities; Agent roles define responsibilities.}
-\end{frame}
-
-% Source page: Deepfield.md Page 44; exactly one frame.
+% Source pages: Deepfield.md Pages 43--44; merged into one frame.
 \setsource{\href{https://arxiv.org/abs/2502.18864}{Towards an AI co-scientist, arXiv:2502.18864}}
-\begin{frame}[c,label=md-44]{Candidate Agents for Hypothesis Refinement}
-\small
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.24\textwidth}L{0.69\textwidth}@{}}
-\toprule
-\textbf{Candidate role} & \textbf{Responsibility} \\
-\midrule
-\textbf{Reflection} & Check assumptions, evidence, counterexamples, and testability. \\[1.0ex]
-\textbf{Ranking} & Pairwise comparisons of scientific value, feasibility,
-and resource needs; retain disagreements. \\[1.0ex]
-\textbf{Proximity} & Cluster and de-duplicate hypotheses; identify complementary
-mechanisms and unexplored directions. \\[1.0ex]
-\textbf{Evolution} & Revise or combine hypotheses; retain versions
-and reasons for changes. \\[1.0ex]
-\textbf{Review synthesis} & Feed recurring errors and knowledge gaps
-into later generation. \\
-\bottomrule
-\end{tabular*}\par
-\slidenote[0.35cm]{%
-Begin as Hypothesis Agent subtasks; split roles only when evaluation justifies the cost.\\[0.4em]
-Internal rankings are not scientific evidence.}
+\begin{frame}[c,label=md-43]{MAS Roles}
+\label{md-44}
+\normalsize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\slideheading{Core roles}
+\medskip
+\begin{itemize}
+\setlength{\itemsep}{0.7em}
+    \item Literature
+    \item Hypothesis
+    \item Code
+    \item Experiment
+    \item Verification
+    \item Supervisor
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\slideheading{Hypothesis refinement}
+\medskip
+\begin{itemize}
+\setlength{\itemsep}{0.7em}
+    \item Reflection
+    \item Ranking
+    \item Proximity
+    \item Evolution
+    \item Review synthesis
+\end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
-

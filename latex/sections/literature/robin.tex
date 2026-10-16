@@ -2,7 +2,7 @@
 \setsource{\href{https://doi.org/10.1038/s41586-026-10652-y}{Robin, Nature (2026)}}
 \begin{frame}[c,label=md-5]{Robin: a closed lab-in-loop workflow}
 \small
-\textbf{Scientific question:} Find potential treatments for dry age-related
+\textbf{Scientific question:} Find potential treatments with drugs for dry age-related
 macular degeneration (dAMD).
 \medskip
 
@@ -14,24 +14,31 @@ macular degeneration (dAMD).
         font=\footnotesize,inner sep=0.12cm},
     labstage/.style={researchstage,draw=orange!70!black,fill=orange!12},
     flow/.style={-{Latex[length=2mm]},thick,draw=structure.fg!80}]
-\node[researchstage] (hyp) at (0,0) {\textbf{1. Hypotheses}\\Crow + Falcon\\Literature review\\and candidates};
-\node[labstage] (exp1) at (3.8,0) {\textbf{2. First experiment}\\Human team\\Flow cytometry\\Y-27632};
-\node[researchstage] (ana1) at (7.6,0) {\textbf{3. Data analysis}\\Finch\\Quantify effects};
-\node[researchstage] (next) at (0,-2.25) {\textbf{6. Next cycle}\\Revised hypotheses\\and candidates};
-\node[labstage] (exp2) at (3.8,-2.25) {\textbf{5. Follow-up}\\Human team + Finch\\RNA-seq and analysis};
-\node[researchstage] (plan) at (7.6,-2.25) {\textbf{4. Follow-up design}\\Crow + Falcon\\Test the mechanism};
+\node[researchstage] (hyp) at (0,0) {\textbf{1. Hypotheses}\\Crow + Falcon\\Literature search};
+\node[labstage] (exp1) at (3.8,0) {\textbf{2. First experiment}\\Human team\\Flow cytometry};
+\node[researchstage] (ana1) at (7.6,0) {\textbf{3. Data analysis}\\Finch\\Flow cytometry analysis};
+\node[researchstage] (ana2) at (0,-2.25) {\textbf{6. Data analysis}\\Finch\\RNA-seq analysis};
+\node[labstage] (exp2) at (3.8,-2.25) {\textbf{5. Follow-up}\\Human team\\RNA-seq};
+\node[researchstage] (reason) at (7.6,-2.25) {\textbf{4. New hypotheses}\\Crow + Falcon\\Literature search};
 \draw[flow] (hyp) -- (exp1);
 \draw[flow] (exp1) -- (ana1);
-\draw[flow] (ana1) -- (plan);
-\draw[flow] (plan) -- (exp2);
-\draw[flow] (exp2) -- (next);
-\draw[flow] (next) -- (hyp);
+\draw[flow] (ana1) -- (reason);
+\draw[flow] (reason) -- (exp2);
+\draw[flow] (exp2) -- (ana2);
+\draw[flow] (ana2) -- node[midway,right,font=\scriptsize,text=structure.fg] {Next cycle} (hyp);
 \end{tikzpicture}
-\caption{Robin's two-experiment research loop. Redrawn from Ghareeb et al.}
+\caption{Robin's research loop.
+Steps 4--6 echo the logic of
+\href{https://doi.org/10.1137/15M1043303}{\textbf{Bayesian design}}.}
 \end{figure}
 \smallskip
-\textbf{Findings:} Ripasudil(best) and KL001(new) enhanced phagocytosis;
-RNA-seq implicated ABCA1 in the ripasudil response.
+\textbf{Findings:} Ripasudil(best currently) and KL001(new mechanism) outperform; Follow-up RNA-seq implicated ABCA1 gene in the ripasudil response.
+\note{Conceptual interpretation of steps 4--6: Crow and Falcon use existing
+evidence to propose a targeted follow-up; the human team collects new data;
+Finch's analysis refines mechanistic hypotheses and informs the next cycle.
+This echoes Bayesian experimental design at a qualitative level. The diagram
+does not imply that Robin explicitly computes Bayesian posteriors or optimizes
+expected information gain.}
 \end{frame}
 
 % Source page: Deepfield.md Page 6; exactly one frame.
@@ -55,14 +62,20 @@ RNA-seq implicated ABCA1 in the ripasudil response.
     \end{itemize}
     \medskip
     \textbf{Evaluation}
+    \smallskip
+
+    On position bias:
     \begin{itemize}
         \setlength{\itemsep}{0.35em}
-        \item Position bias in LLM judges
         \item Tournament
         \item Bradley--Terry--Luce (BTL)
     \end{itemize}
     \medskip
     \textbf{Prompt engineering}
+    \begin{itemize}
+        \setlength{\itemsep}{0.35em}
+        \item Iteration
+    \end{itemize}
 \end{column}
 \end{columns}
 \end{frame}
